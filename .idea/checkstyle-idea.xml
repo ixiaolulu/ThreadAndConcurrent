@@ -4,7 +4,7 @@
     <option name="configuration">
       <map>
         <entry key="active-configuration" value="LOCAL_FILE:D:/software/Java开发环境配置及规范/checkstyle说明/jackyun_checkstyle.xml:differ-checkStyle" />
-        <entry key="checkstyle-version" value="8.22" />
+        <entry key="checkstyle-version" value="8.23" />
         <entry key="copy-libs" value="true" />
         <entry key="location-0" value="BUNDLED:(bundled):Sun Checks" />
         <entry key="location-1" value="BUNDLED:(bundled):Google Checks" />
