@@ -12,10 +12,10 @@ public class SynchronizedTest {
     private static final Object o = new Object();
 
     public static void m() {
-        // synchronized (o) {
-        // count--;
-        // System.out.println(Thread.currentThread().getName() + " count = " + count);
-        // }
+         synchronized (o) {
+         count--;
+         System.out.println(Thread.currentThread().getName() + " count = " + count);
+         }
 
         synchronized (SynchronizedTest.class) {
             count--;
