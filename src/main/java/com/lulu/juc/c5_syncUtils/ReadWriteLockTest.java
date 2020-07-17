@@ -1,4 +1,4 @@
-package com.lulu.juc.c5;
+package com.lulu.juc.c5_syncUtils;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;

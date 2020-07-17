@@ -1,4 +1,4 @@
-package com.lulu.juc.c5;
+package com.lulu.juc.c5_syncUtils;
 
 import java.util.Random;
 import java.util.concurrent.Phaser;
