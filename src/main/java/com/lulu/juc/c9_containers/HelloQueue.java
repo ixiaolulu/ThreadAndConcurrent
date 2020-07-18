@@ -15,6 +15,7 @@ public class HelloQueue {
         queue.add(1);
         queue.add(2);
         queue.peek();
+        //从队列拿走并删除
         queue.poll();
         try {
             queue.put(3);
