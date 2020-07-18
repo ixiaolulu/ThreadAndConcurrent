@@ -1,9 +1,6 @@
-/**
- * Copyright(C) 2020 Hangzhou Differsoft Co., Ltd. All rights reserved.
- */
-package com.lulu.juc.containers;
 
-import java.util.Queue;
+package com.lulu.juc.c9_containers;
+
 import java.util.concurrent.ArrayBlockingQueue;
 
 /**

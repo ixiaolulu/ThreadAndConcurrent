@@ -1,6 +1,4 @@
-/**
- * Copyright(C) 2020 Hangzhou Differsoft Co., Ltd. All rights reserved.
- */
+
 package com.lulu.juc.c8_RefTypeAndThreadLocal;
 
 import java.util.concurrent.TimeUnit;
