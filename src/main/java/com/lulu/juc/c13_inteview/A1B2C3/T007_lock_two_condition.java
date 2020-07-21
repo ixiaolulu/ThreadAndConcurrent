@@ -1,6 +1,4 @@
-/**
- * Copyright(C) 2020 Hangzhou Differsoft Co., Ltd. All rights reserved.
- */
+
 package com.lulu.juc.c13_inteview.A1B2C3;
 
 import java.util.concurrent.locks.Condition;
