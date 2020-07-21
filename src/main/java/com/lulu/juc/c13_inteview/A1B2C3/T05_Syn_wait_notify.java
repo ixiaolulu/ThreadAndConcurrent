@@ -1,20 +1,13 @@
-/**
- * Copyright(C) 2020 Hangzhou Differsoft Co., Ltd. All rights reserved.
- */
-package com.lulu.juc.c13_inteview.A1B2C3;
 
-import java.util.concurrent.CountDownLatch;
+package com.lulu.juc.c13_inteview.A1B2C3;
 
 /**
  *
- * @since 2020/7/21 15:47
+ * @since 2020/7/21 15:33
  * @author Milo.Ding
  *
  */
-public class T006_Syn_wait_notify {
-
-    private static volatile boolean t1Started = false;
-//    static CountDownLatch latch =  new CountDownLatch(1);
+public class T05_Syn_wait_notify {
 
     public static void main(String[] args) {
         final Object o = new Object();
@@ -26,8 +19,6 @@ public class T006_Syn_wait_notify {
             synchronized (o) {
                 for (char c : b) {
                     System.out.print(c);
-                    t1Started = true;
-//                    latch.countDown();
                     try {
                         o.notify();
                         o.wait();// 会释放锁
@@ -40,19 +31,7 @@ public class T006_Syn_wait_notify {
         }, "t1").start();
 
         new Thread(() -> {
-//            try {
-//                latch.await();
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
             synchronized (o) {
-                while(!t1Started){
-                    try {
-                        o.wait();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
                 for (char c : a) {
                     System.out.print(c);
                     try {
@@ -66,4 +45,5 @@ public class T006_Syn_wait_notify {
             }
         }, "t2").start();
     }
+
 }

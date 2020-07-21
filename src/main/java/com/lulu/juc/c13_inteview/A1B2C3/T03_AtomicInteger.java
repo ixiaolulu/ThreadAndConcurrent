@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author Milo.Ding
  *
  */
-public class T003_AtomicInteger {
+public class T03_AtomicInteger {
 
     static AtomicInteger threadNo = new AtomicInteger(1);
 

@@ -7,15 +7,16 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  *
- * @since 2020/7/21 15:57
+ * @since 2020/7/21 16:02
  * @author Milo.Ding
  *
  */
-public class T007_lock_one_condition {
+public class T07_lock_two_condition {
 
     public static void main(String[] args) {
         Lock lock = new ReentrantLock();
-        Condition condition = lock.newCondition();
+        Condition condition1 = lock.newCondition();
+        Condition condition2 = lock.newCondition();
 
         char[] a = "123456789".toCharArray();
         char[] b = "ABCDEFGHI".toCharArray();
@@ -23,12 +24,13 @@ public class T007_lock_one_condition {
         new Thread(() -> {
             try {
                 lock.lock();
+
                 for (char c : b) {
                     System.out.print(c);
-                    condition.signal();
-                    condition.await();
+                    condition2.signal();
+                    condition1.await();
                 }
-                condition.signal();
+                condition2.signal();
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {
@@ -40,12 +42,13 @@ public class T007_lock_one_condition {
         new Thread(() -> {
             try {
                 lock.lock();
+
                 for (char c : a) {
                     System.out.print(c);
-                    condition.signal();
-                    condition.await();
+                    condition1.signal();
+                    condition2.await();
                 }
-                condition.signal();
+                condition1.signal();
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {

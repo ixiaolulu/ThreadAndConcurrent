@@ -10,7 +10,7 @@ import java.util.concurrent.BlockingQueue;
  * @author Milo.Ding
  *
  */
-public class T004_BlockingQueue {
+public class T04_BlockingQueue {
     static BlockingQueue<String> q1 = new ArrayBlockingQueue(1);
     static BlockingQueue<String> q2 = new ArrayBlockingQueue(1);
 
