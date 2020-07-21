@@ -21,7 +21,7 @@ public class T09_TransferQueue {
 
         strs.transfer("aaa");
 
-        strs.put("aaa");
+//        strs.put("aaa");
 
 
         new Thread(() -> {
