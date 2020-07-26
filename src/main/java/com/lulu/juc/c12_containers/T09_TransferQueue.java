@@ -3,7 +3,7 @@ package com.lulu.juc.c12_containers;
 import java.util.concurrent.LinkedTransferQueue;
 
 /**
- * @Description: transfer放上去一个数据，等待线程消费，消费完成在去干其他事情
+ * @Description: transfer放上去一个数据，等待线程消费，消费完成在去干其他事情,多线程传递多次传递
  * @Author: Milo
  * @Date: 2020-07-18 20:23
  */
